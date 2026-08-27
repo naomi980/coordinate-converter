@@ -39,8 +39,22 @@ The input file <ins>**must**</ins> contain columns for:
 The converted coordinates are saved to:  
 `output/outorgas_utm.csv`  
 
-The output file contains the following columns:  
+The output file contains the following columns named as:  
 - Point
 - UTM zone
 - UTM X coordinate
 - UTM Y coordinate
+
+## Example
+### Input
+| REQUERIMENTO (POINT ID)    | LATITUDE_SIRGAS2000 (LATITUDE)  | LONGITUDE_SIRGAS2000 (LONGITUDE) |
+|:--------------------------:|:-------------------------------:|:--------------------------------:|
+|2000L10005899868            | -21.87089769                    |-47.89201125                      |
+
+### Output
+| Point           | UTM zone     | UTM X coordinate | UTM Y coordinate |
+|:---------------:|:------------:|:----------------:|:----------------:|
+|2000L10005899868 | 23S          |     201122.40    |     7578651.23   |
+
+## Future Improvements
+- Implement a Pandas-based version for the program
